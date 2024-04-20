@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from LogisticRegression import LogisticRegression
+from BGD import BGD
 from SGD import SGD
 
 df = pd.read_csv('data.csv')
@@ -43,7 +43,7 @@ for lr in lrs :
 
 for lr in lrs :
 
-    clf = LogisticRegression(lr)
+    clf = BGD(lr)
     clf.fit(X_train, y_train)
 
     y_pred = clf.predict(X_test)

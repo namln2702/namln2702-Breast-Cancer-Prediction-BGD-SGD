@@ -3,7 +3,7 @@ import numpy as np
 def sigmoid(z):
     return 1 /(1 + np.exp(-z))
 
-class LogisticRegression:
+class BGD:
     def __init__(self, lr = 0.0001, n_iter = 100):
         self.lr = lr
         self.n_iter = n_iter
